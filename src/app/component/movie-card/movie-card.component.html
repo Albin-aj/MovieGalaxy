@@ -1,0 +1,13 @@
+<div class="w-[290px]  text-black/80 rounded-xl font-sans h-[400px] overflow-hidden bg-slate-200 text-black" [routerLink]="['/single',movieData.id]" (click)="passID(movieData.id)">
+  <div class="">
+  <img class="h-64 w-[310px] rounded-t-xl" src="{{imageUrl}}/{{movieData?.backdrop_path}}" alt="">
+  </div>
+  <div class="p-2 space-y-2 overflow-hidden">
+    <p class="text-2xl max-h-16 overflow-hidden font-semibold" *ngIf="movieData.name">{{movieData?.name}}</p>
+    <p class="text-2xl max-h-16 overflow-hidden font-semibold" *ngIf="movieData.title">{{movieData?.title}}</p>
+
+    <p class="text-black/70">Rating {{movieData?.vote_average}}</p>
+    <p class="font-semibold text-black/70" *ngIf="movieData.first_air_date">RD:{{movieData?.first_air_date}}</p>
+    <p class="font-semibold text-black/70" *ngIf="movieData.release_date">{{movieData?.release_date}}</p>
+  </div>
+</div>
